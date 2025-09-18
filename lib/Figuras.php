@@ -27,7 +27,7 @@
             foreach($_SESSION['figuras'] as $figura)
                 if($filter->match($figura))
                     $match[] = $figura;
-            return $match;
+            return $match; 
         }
 
         public function get($id)
