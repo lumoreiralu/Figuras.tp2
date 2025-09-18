@@ -22,7 +22,7 @@
 
         public function ToString()
         {
-            return $this->getName() . " Area: " . $this->getArea() . " Perimetro: " . $this->getPerimetro();
+            return $this->getName() . " Area: " . $this->getArea() . " Perimetro: " . $this->getPerimetro() ." id: ". $this->getId();
         }
     }
 

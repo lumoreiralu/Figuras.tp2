@@ -40,12 +40,18 @@
             return $_SESSION['figuras'];
         }
 
-        public function insert($figura)
-        {
-            
-            $figura->setId(uniqid("", true));
-            $_SESSION['figuras'][$figura->getId()] = $figura;
-        }
+public function insert($figura)
+{
+    if (!isset($_SESSION['last_id'])) {
+        $_SESSION['last_id'] = 0;
+    }
+
+    $_SESSION['last_id']++;
+    $figura->setId($_SESSION['last_id']);
+
+    $_SESSION['figuras'][$figura->getId()] = $figura;
+}
+
 
         public function size()
         {
