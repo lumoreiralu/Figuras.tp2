@@ -11,8 +11,8 @@ echo
 
     foreach($figuras->getAll() as $figura) {
         echo "<li>" . 
-                $figura->ToString() . 
-                " | <a href='/web22025/figuras/id/" . $figura->getId() . "'>VER</a>" .
+                $figura->__toString() . 
+                " | <a href='id/" . $figura->getId() . "'>VER</a>" .
              "</li>";
     }
     

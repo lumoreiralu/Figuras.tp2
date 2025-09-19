@@ -20,7 +20,7 @@
 
         public abstract function getPerimetro();
 
-        public function ToString()
+        public function __toString()
         {
             return $this->getName() . " Area: " . $this->getArea() . " Perimetro: " . $this->getPerimetro() ." id: ". $this->getId();
         }
